@@ -39,6 +39,18 @@ class LinkedList
     end
   end
 
+  def size()
+    @head = @tail ? 1 : 2 + @nodes.length
+  end
+
+  def head()
+    return @head
+  end
+
+  def tail()
+    return @tail
+  end
+
   def to_s(node = @head)
     if node == @tail then
       return "[ #{node.value} ] -> [ nil ]" 
